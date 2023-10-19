@@ -4,15 +4,28 @@
     <title>ss</title>
     <meta charset="UTF-8">
 <style>
+fieldset {
+  display: inline;
+}
+fieldset:hover {
+  cursor: grab;
+}
+fieldset:active {
+  cursor: grabbing;
+}
+legend {
+  cursor: auto;
+}
 table {
   border:1px solid silver;
   border-collapse: collapse;
   font-family: Arial;
+  cursor: auto;
 }
 td, th {
   border:1px solid silver;
 }
-td:hover {
+[contenteditable]:hover {
   outline: 1px solid black;
 }
 th {
@@ -26,8 +39,9 @@ tr:first-child th:first-child {
   padding: 0;
 }
 div#upperleft {
-  border-right: 5px solid #BBB;
-  border-bottom: 5px solid #BBB;
+  padding: 3px;
+  border-right: 4px solid #BBB;
+  border-bottom: 4px solid #BBB;
 }
 tr th:first-child {
   min-width: 3.5em;
@@ -36,6 +50,9 @@ tr th:first-child {
   </head>
   <body>
 <p>Looks like a spreadsheet:</p>
+<form>
+<fieldset draggable="true">
+<legend contenteditable>Sheet 1</legend>
 <table>
 <tr>
 <th><div id="upperleft">&nbsp;</div></th>
@@ -86,6 +103,8 @@ tr th:first-child {
 <td contenteditable></td>
 </tr>
 </table>
+</fieldset>
+</form>
 <hr>
 <p>Screenshot of a spreadsheet:</p>
 <img src="ss.png" alt="screenshot of 5x5 sheet">
