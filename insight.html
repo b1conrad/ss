@@ -19,8 +19,11 @@ p {
 p.lead-in:hover ~ table {
   outline: 1px solid black;
 }
-p.lead-in:hover + table td {
-  outline: 1px solid silver;
+p.lead-in:hover ~ table td {
+  border: 1px solid silver;
+}
+p.lead-in:hover ~ table div {
+  outline: none !important;
 }
 p.demo {
   padding-right: 8px;
@@ -36,8 +39,8 @@ p.demo:hover {
 This insight comes from Robert Máslo
 in his StackOverflow post,
 "<a href="https://stackoverflow.com/questions/13526712/make-div-draggable-using-css#answer-77183405" target="_blank">Draggable and resizable dialog in pure CSS is posible</a>":
-In a 2x2 table, the position of the bottom right cell is equal to the
-size of the top left cell.
+In a 2x2 table, the <em>position</em> of the bottom right cell
+is equal to the <em>size</em> of the top left cell.
 </p>
 <p class="lead-in">
 Below is a 2x2 table.
